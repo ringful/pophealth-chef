@@ -17,7 +17,7 @@ On Amazon EC2, things can be further simplified. You do not even need to log int
 
 ## Instructions for Amazon EC2
 
-1. Startup an EC2 instance using the official Ubuntu 10.04 image (e.g., <code>ami-55dc0b3c<code> for US East region. See a complete list of different EC2 regions at [Ubuntu support site](http://cloud-images.ubuntu.com/releases/10.04/release/)).
+1. Startup an EC2 instance using the official Ubuntu 10.04 image (e.g., <code>ami-55dc0b3c</code> for US East region. See a complete list of different EC2 regions at [Ubuntu support site](http://cloud-images.ubuntu.com/releases/10.04/release/)).
 
 2. Copy and paste the content of the <code>sudo ubuntu-10.04-startup.sh</code> file into the "user data" box when starting up the EC2 server.
 
@@ -45,10 +45,10 @@ With EC2, we can create on-demand PopHealth instances outside of our firewalls. 
 
 To import data into the PopHealth server for analysis and visualization, you could do one of the following:
 
-1. Configure your EHR to upload CCR / CCD content to URL http://pophealth.ip-address:3000/records The default authentication username and password are "pophealth / pophealth". This is the option if you deployed PopHealth servers outside of your firewall.
+* Configure your EHR to upload CCR / CCD content to URL http://pophealth.ip-address:3000/records The default authentication username and password are "pophealth / pophealth". This is the option if you deployed PopHealth servers outside of your firewall.
 
 OR
 
-2. If the PopHealth server is deployed inside your EHR's firewall, you could configure it to retrieve CCR / CCD files containing patient information from a shared file directories, where the EHR exports those files.
+* If the PopHealth server is deployed inside your EHR's firewall, you could configure it to retrieve CCR / CCD files containing patient information from a shared file directories, where the EHR exports those files.
 
 Enjoy!
