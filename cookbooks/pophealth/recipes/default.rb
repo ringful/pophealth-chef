@@ -96,9 +96,9 @@ end
 bash "pophealth admin" do
     user "pophealth"
     group "pophealth"
-    home "/opt/pophealth/"
     cwd "/opt/pophealth/deploy/current"
     code <<-EOH
+        export HOME=/opt/pophealth
         source /etc/profile.d/rvm.sh
         rvm use 1.9.2@pophealth --create
         bundle exec rake admin:create_admin_account
