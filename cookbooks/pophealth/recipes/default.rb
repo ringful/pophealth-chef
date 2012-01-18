@@ -96,6 +96,7 @@ end
 bash "pophealth admin" do
     user "pophealth"
     group "pophealth"
+    home "/opt/pophealth/"
     cwd "/opt/pophealth/deploy/current"
     code <<-EOH
         source /etc/profile.d/rvm.sh
