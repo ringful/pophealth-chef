@@ -2,35 +2,6 @@
 # Initially developed by Norman Richards for Ringful Health
 # inspired by http://allanfeid.com/content/using-amazons-cloudformation-cloud-init-chef-and-fog-automate-infrastructure
 
-if [ -d /etc/profile.d ]; then
-  for i in /etc/profile.d/*.sh; do
-    if [ -r $i ]; then
-      . $i
-    fi
-  done
-  unset i
-fi
-
-if [ "$PS1" ]; then
-  if [ "$BASH" ]; then
-    PS1='\u@\h:\w\$ '
-    if [ -f /etc/bash.bashrc ]; then
-        . /etc/bash.bashrc
-    fi
-  else
-    if [ "`id -u`" -eq 0 ]; then
-      PS1='# '
-    else
-      PS1='$ '
-    fi
-  fi
-fi
-
-umask 022
-
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
-HOME="/root"
-
 log='/tmp/init.log'
 apt-get update &>> $log
 apt-get install -y ruby ruby1.8-dev build-essential wget libruby-extras libruby1.8-extras git-core &>> $log
